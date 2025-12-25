@@ -1,0 +1,28 @@
+{
+  "name": "personal-whatsapp-gateway",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZaheaniQo/personal-whatsapp-gateway.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZaheaniQo/personal-whatsapp-gateway/issues"
+  },
+  "homepage": "https://github.com/ZaheaniQo/personal-whatsapp-gateway#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^5.2.1",
+    "node-schedule": "^2.1.1",
+    "qrcode-terminal": "^0.12.0",
+    "whatsapp-web.js": "^1.34.2"
+  }
+}
