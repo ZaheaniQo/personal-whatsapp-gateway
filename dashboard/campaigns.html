@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Campaigns | WhatsApp Campaign Platform</title>
+    <link rel="stylesheet" href="/dashboard/dashboard.css" />
+  </head>
+  <body data-page="campaigns">
+    <div class="app shell">
+      <header class="topbar">
+        <div class="brand">
+          <div class="brand-title">WhatsApp Campaign Platform</div>
+          <div class="brand-sub">Campaign builder</div>
+        </div>
+        <nav class="nav">
+          <a href="/dashboard">Dashboard</a>
+          <a href="/instances">Instances</a>
+          <a class="active" href="/campaigns">Campaigns</a>
+          <a href="/ops-ui">Ops</a>
+        </nav>
+        <div class="user-pill" id="userPill">User</div>
+        <button id="logoutBtn" class="ghost">Logout</button>
+      </header>
+
+      <main class="grid split">
+        <section class="card">
+          <div class="card-title">Create Campaign</div>
+          <form id="campaignForm" class="stack">
+            <label>
+              Instance
+              <select id="campaignInstance"></select>
+            </label>
+            <label>
+              Name
+              <input id="campaignName" type="text" placeholder="April promo" required />
+            </label>
+            <label>
+              Message
+              <textarea id="campaignMessage" rows="4" placeholder="Hello from the team..."></textarea>
+            </label>
+            <label>
+              Media Path (optional)
+              <input id="campaignMedia" type="text" placeholder="/data/media/banner.png" />
+            </label>
+            <label>
+              Recipients (one per line)
+              <textarea id="campaignRecipients" rows="6" placeholder="15551234567"></textarea>
+            </label>
+            <label>
+              Recipients CSV (optional)
+              <input id="campaignCsv" type="file" accept=".csv" />
+            </label>
+            <button type="submit" class="primary">Create campaign</button>
+          </form>
+        </section>
+
+        <section class="card">
+          <div class="card-title">Campaigns</div>
+          <div id="campaignsList" class="list-grid"></div>
+        </section>
+      </main>
+    </div>
+
+    <div id="toastContainer" class="toast-container"></div>
+
+    <script src="/dashboard/dashboard.js"></script>
+  </body>
+</html>

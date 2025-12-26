@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login | WhatsApp Campaign Platform</title>
+    <link rel="stylesheet" href="/dashboard/dashboard.css" />
+  </head>
+  <body data-page="login" class="auth-body">
+    <div class="auth-card">
+      <div class="auth-header">
+        <h1>Welcome back</h1>
+        <p>Sign in to manage your WhatsApp campaigns.</p>
+      </div>
+
+      <form id="loginForm" class="auth-form">
+        <label>
+          Mobile
+          <input id="loginMobile" type="tel" placeholder="e.g. 15551234567" required />
+        </label>
+        <label>
+          Password
+          <input id="loginPassword" type="password" required />
+        </label>
+        <label>
+          API Key
+          <input id="loginApiKey" type="password" placeholder="Required for gateway access" />
+        </label>
+        <button type="submit" class="primary full">Login</button>
+      </form>
+
+      <div id="authMessage" class="auth-message muted"></div>
+    </div>
+
+    <script src="/dashboard/dashboard.js"></script>
+  </body>
+</html>

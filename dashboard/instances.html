@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Instances | WhatsApp Campaign Platform</title>
+    <link rel="stylesheet" href="/dashboard/dashboard.css" />
+  </head>
+  <body data-page="instances">
+    <div class="app shell">
+      <header class="topbar">
+        <div class="brand">
+          <div class="brand-title">WhatsApp Campaign Platform</div>
+          <div class="brand-sub">Instance management</div>
+        </div>
+        <nav class="nav">
+          <a href="/dashboard">Dashboard</a>
+          <a class="active" href="/instances">Instances</a>
+          <a href="/campaigns">Campaigns</a>
+          <a href="/ops-ui">Ops</a>
+        </nav>
+        <div class="user-pill" id="userPill">User</div>
+        <button id="logoutBtn" class="ghost">Logout</button>
+      </header>
+
+      <main class="grid split">
+        <section class="card">
+          <div class="card-title">Add Instance</div>
+          <form id="instanceForm" class="stack">
+            <label>
+              Label
+              <input id="instanceLabel" type="text" placeholder="Main sales line" />
+            </label>
+            <button type="submit" class="primary">Create instance</button>
+          </form>
+        </section>
+
+        <section class="card">
+          <div class="card-title">Instances</div>
+          <div id="instancesList" class="list-grid"></div>
+        </section>
+
+        <section class="card qr-card">
+          <div class="card-title">Selected QR</div>
+          <div id="instanceQrState" class="qr-state">Select an instance.</div>
+          <canvas id="instanceQrCanvas" width="260" height="260" aria-label="QR code"></canvas>
+          <div id="instanceQrMeta" class="qr-meta muted"></div>
+          <button id="reconnectInstanceBtn" class="ghost">Start selected</button>
+        </section>
+      </main>
+    </div>
+
+    <div id="toastContainer" class="toast-container"></div>
+
+    <script src="/dashboard/qrcode.js"></script>
+    <script src="/dashboard/dashboard.js"></script>
+  </body>
+</html>
